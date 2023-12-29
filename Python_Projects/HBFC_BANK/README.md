@@ -17,9 +17,8 @@ The HBFC Loan Customer Analysis project involves building a predictive model usi
   - [6. Build and Train the Logistic Regression Model](#6-build-and-train-the-logistic-regression-model)
   - [7. Evaluate the Model](#7-evaluate-the-model)
   - [8. Interpret the Results](#8-interpret-the-results)
-- [How to Use](#how-to-use)
 - [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 
@@ -105,12 +104,6 @@ The model's performance is evaluated on the testing data set.
 
 The interpretation of the confusion matrix and classification report to understand the model's performance.
 
-
-## Contributing
-
-Certainly! When inviting others to contribute to your project, you want to make the process clear and friendly. Here's a sample section for your README:
-
----
 
 ## Contributing
 
