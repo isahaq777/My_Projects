@@ -9,8 +9,8 @@ The HBFC Loan Customer Analysis project is organized as follows:
 
 ```
 project/
-└── python/
-    └── HBFC Loan Customer Analysis/
+└── Python/
+└── Data Science/
 ```
 
 ## Contributing
