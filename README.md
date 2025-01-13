@@ -42,7 +42,8 @@ Welcome to my GitHub repository showcasing a diverse range of projects in **Data
 
 
   
-- **Domain Knowledge**: Finance, healthcare, real estate, education, telecom.  
+
+**Domain Knowledge**: Finance, healthcare, real estate, education, telecom.  
 
 
 
