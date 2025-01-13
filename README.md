@@ -41,13 +41,10 @@ Welcome to my GitHub repository showcasing a diverse range of projects in **Data
 - **Tasks**: Developed models to identify at-risk customers and recommended strategies to reduce churn.  
 
 
-
- **Skills and Tools Used**  
-- **Languages**: Python (pandas, numpy, matplotlib, seaborn, scikit-learn).  
-- **Machine Learning**: Logistic regression, classification models, regression analysis, clustering.  
+  
 - **Domain Knowledge**: Finance, healthcare, real estate, education, telecom.  
 
 
 
  **Connect With Me**  
-If you're interested in collaborating or discussing these projects, feel free to reach out!  
+If you're interested in collaborating or discussing these projects, feel free to reach out!😇.  
