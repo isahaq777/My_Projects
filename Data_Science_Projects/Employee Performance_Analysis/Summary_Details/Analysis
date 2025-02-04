@@ -1,0 +1,62 @@
+Interpreting Data and Summarizing ML Algorithm & Data Processing Choices
+Data Processing and Preparation
+Our project began with a comprehensive analysis of employee performance data from INX Future Inc. The raw dataset was obtained from third-party sources and contained multiple data types, including continuous, ordinal, and categorical variables. To ensure robust modeling, we performed the following preprocessing steps:
+
+Data Cleaning:
+
+Removed missing values (using techniques like dropping rows with incomplete data) to ensure consistency between the feature matrix (X) and the target variable (y).
+Standardized the dataset by resetting indices and ensuring that all numerical columns were of the proper data type.
+
+Feature Selection Based on Correlation:
+
+We computed the correlation matrix to understand relationships between the features and the target variable, PerformanceRating.
+A threshold (e.g., absolute correlation > 0.3) was set to filter out less influential features. This step reduced the feature space to only those variables that were most strongly correlated with employee performance.
+
+Feature Engineering and Transformation:
+
+Scaling/Normalization: All numeric features were scaled using StandardScaler to have zero mean and unit variance. This step was essential for models that are sensitive to feature scales (e.g., SVM, Logistic Regression).
+Interaction Terms: We generated polynomial features (or limited interaction terms) to capture non-linear relationships between variables. These engineered features helped improve the predictive power of our models.
+Dimensionality Considerations: By focusing on the highly correlated features and applying transformations, we maintained a compact feature set (e.g., 9 highly relevant features) which reduced noise and improved model interpretability.
+ML Algorithm Selection and Model Training
+Given the diverse nature of the data and the need for robust prediction, we explored several machine learning algorithms:
+
+Base Models:
+
+RandomForestClassifier: Chosen for its robustness, interpretability (via feature importances), and ability to handle non-linear relationships.
+XGBoost, LightGBM, and CatBoost: These gradient boosting frameworks were evaluated for their strong performance on structured/tabular data and their ability to handle complex interactions among features.
+
+Ensemble Techniques:
+To leverage the strengths of each base model, we built three ensemble models:
+
+Blended Ensemble: Combined predictions by averaging the predicted probabilities with equal weights.
+Voting Ensemble: Employed soft voting, where the probabilities predicted by each base model were averaged to determine the final prediction.
+Stacking Ensemble: Used a meta-model (Logistic Regression) to learn the optimal way to combine predictions from base models.
+Despite the different approaches, all three ensembles achieved similar performance (approximately 95% accuracy). Given this consistency, the Voting Ensemble was favored for its simplicity and ease of deployment.
+
+Hyperparameter Tuning:
+
+We applied RandomizedSearchCV to optimize key hyperparameters for each model. For example, parameters such as n_estimators, max_depth, min_samples_split, and min_samples_leaf were tuned for the RandomForest model.
+Tuning ensured that the models operated at their best, ultimately improving predictive accuracy and robustness.
+
+Model Evaluation and Comparison:
+
+Each model (both the base models and the ensembles) was evaluated on a hold-out test set using metrics such as precision, recall, f1-score, and overall accuracy.
+Detailed confusion matrices and classification reports were generated to identify areas where the models performed well and where they might need further improvement (e.g., recall for the minority class).
+
+Key Insights and Final Recommendations
+
+Based on our analysis, the most important features influencing employee performance were determined to be:
+
+EmpLastSalaryHikePercent
+
+EmpEnvironmentSatisfaction
+
+YearsSinceLastPromotion
+These features were not only statistically significant (as evidenced by correlation and SHAP analyses) but also aligned with business intuition: regular performance-based salary hikes, a positive work environment, and timely promotions contribute significantly to employee performance.
+
+Recommendations:
+
+Salary Policy: Enhance performance-based salary increments.
+Work Environment: Invest in improving the overall work environment and employee satisfaction.
+Career Advancement: Implement policies to reduce delays in promotions and encourage career development.
+Finally, a highly accurate ensemble model (with a 95% accuracy) has been trained and stored. This model is now ready for deployment as a predictive tool in the hiring process to identify candidates likely to excel in their roles.
