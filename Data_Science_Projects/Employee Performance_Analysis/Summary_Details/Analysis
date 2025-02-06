@@ -10,7 +10,7 @@ Standardized the dataset by resetting indices and ensuring that all numerical co
 Feature Selection Based on Correlation:
 
 We computed the correlation matrix to understand relationships between the features and the target variable, PerformanceRating.
-A threshold (e.g., absolute correlation > 0.3) was set to filter out less influential features. This step reduced the feature space to only those variables that were most strongly correlated with employee performance.
+A threshold was set to filter out less influential features. This step reduced the feature space to only those variables that were most strongly correlated with employee performance.
 
 Feature Engineering and Transformation:
 
@@ -31,7 +31,7 @@ To leverage the strengths of each base model, we built three ensemble models:
 Blended Ensemble: Combined predictions by averaging the predicted probabilities with equal weights.
 Voting Ensemble: Employed soft voting, where the probabilities predicted by each base model were averaged to determine the final prediction.
 Stacking Ensemble: Used a meta-model (Logistic Regression) to learn the optimal way to combine predictions from base models.
-Despite the different approaches, all three ensembles achieved similar performance (approximately 95% accuracy). Given this consistency, the Voting Ensemble was favored for its simplicity and ease of deployment.
+Despite the different approaches, all three ensembles achieved similar performance ( But Stacking Ensemble has better performance to other ensemble techniques ). Given this consistency, the Voting Ensemble was favored for its simplicity and ease of deployment.
 
 Hyperparameter Tuning:
 
@@ -52,11 +52,21 @@ EmpLastSalaryHikePercent
 EmpEnvironmentSatisfaction
 
 YearsSinceLastPromotion
-These features were not only statistically significant (as evidenced by correlation and SHAP analyses) but also aligned with business intuition: regular performance-based salary hikes, a positive work environment, and timely promotions contribute significantly to employee performance.
 
-Recommendations:
+These features were not only statistically significant (as evidenced by correlation) but also aligned with business intuition: regular performance-based salary hikes, a positive work environment, and timely promotions contribute significantly to employee performance.
 
-Salary Policy: Enhance performance-based salary increments.
-Work Environment: Invest in improving the overall work environment and employee satisfaction.
-Career Advancement: Implement policies to reduce delays in promotions and encourage career development.
-Finally, a highly accurate ensemble model (with a 95% accuracy) has been trained and stored. This model is now ready for deployment as a predictive tool in the hiring process to identify candidates likely to excel in their roles.
+ Exploratory Data Analysis (EDA)
+- Features were analyzed to check for missing values, outliers, and correlations.
+- Label encoding and feature engineering were applied where necessary.
+
+ Model Training & Performance
+| Model                | Accuracy  | Precision | Recall    | F1-score   |
+|----------------------|---------- |-----------|-----------|------------|
+| Blended Ensemble     | 0.92      | 0.86      | 0.88      | 0.87       |
+| Voting Ensemble      | 0.92      | 0.86      | 0.88      | 0.87       |
+| Stacking Ensemble    | 0.93      | 0.89      | 0.89      | 0.89       |
+
+- The Stacking Ensemble model performed the best with 93% accuracy.  
+- Class 1 (Majority Class) has 96% recall, indicating that the model effectively captures employees in this category.  
+- Class 2 (Minority Class) shows good precision (0.89), but recall is slightly lower (0.81).
+

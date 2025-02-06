@@ -1,15 +1,21 @@
-Results, Analysis, and Business Insights
+Business Insights
 
 Department-wise Performances:
 
 Our analysis revealed significant differences in performance across departments. Some departments demonstrated consistently higher performance ratings, while others showed room for improvement. These insights help identify where targeted interventions (such as additional training or changes in management practices) are needed.
 
-Predictive Model:
+Key Takeaways
+- The Stacking Ensemble model performed the best with an accuracy of 93%.
+- All models showed strong predictive power, with precision-recall values above 80% for all classes.
+- Class 2 had slightly lower recall, which means some employees in this category may be misclassified.
 
-The final predictive model (a Voting Ensemble, selected for its simplicity and ease of interpretation) achieves an overall accuracy of 95% on the test set. This model predicts employee performance based on key input factors and is designed to support the hiring process by identifying candidates who are likely to perform well.
+ 📌Recommendations
 
-Key Recommendations:
+✅ Deploy the Stacking Model as the final model since it performed the best.  
+✅ Further improve performance by fine-tuning hyperparameters or adding more training data.
+✅Salary Increments: Review and potentially increase performance-based salary hikes, as salary adjustments are a major driver of performance.
+✅Work Environment: Invest in improving work environment satisfaction through enhanced facilities, better management practices, and increased employee engagement initiatives.
+✅Career Advancement: Shorten the interval between promotions by establishing clear career progression paths and upskilling opportunities, which may lead to improved employee performance.
 
-Salary Increments: Review and potentially increase performance-based salary hikes, as salary adjustments are a major driver of performance.
-Work Environment: Invest in improving work environment satisfaction through enhanced facilities, better management practices, and increased employee engagement initiatives.
-Career Advancement: Shorten the interval between promotions by establishing clear career progression paths and upskilling opportunities, which may lead to improved employee performance.
+
+
