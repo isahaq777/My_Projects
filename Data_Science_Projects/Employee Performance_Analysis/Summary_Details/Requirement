@@ -1,5 +1,3 @@
-I have downloaded the employee performance date of INX Future Inc.
-
 📌 Requirement Document
  Project Title: Employee Performance Analysis  
  Objective:  
@@ -7,7 +5,7 @@ The goal of this project is to develop a machine learning model that predicts em
 
  Data Sources:  
 - Dataset: Contains employee-related features (e.g., work-life balance, job role, satisfaction scores).  
-- Features Used: 4 selected features were used for modeling after preprocessing.  
+- Features Used: 4 selected features were used for modeling after preprocessing.
 
  ML Techniques Used:  
 1. Blended Ensemble Model (LightGBM + other models)  

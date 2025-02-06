@@ -4,6 +4,12 @@ Department-wise Performances:
 
 Our analysis revealed significant differences in performance across departments. Some departments demonstrated consistently higher performance ratings, while others showed room for improvement. These insights help identify where targeted interventions (such as additional training or changes in management practices) are needed.
 
+Based on our analysis, the most important features influencing employee performance were determined to be:
+
+1. EmpLastSalaryHikePercent
+2. EmpEnvironmentSatisfaction
+3. YearsSinceLastPromotion
+
 Key Takeaways
 - The Stacking Ensemble model performed the best with an accuracy of 93%.
 - All models showed strong predictive power, with precision-recall values above 80% for all classes.
@@ -12,7 +18,7 @@ Key Takeaways
  📌Recommendations
 
 ✅ Deploy the Stacking Model as the final model since it performed the best.  
-✅ Further improve performance by fine-tuning hyperparameters or adding more training data.
+✅ Further improve performance by adding more training data.
 ✅Salary Increments: Review and potentially increase performance-based salary hikes, as salary adjustments are a major driver of performance.
 ✅Work Environment: Invest in improving work environment satisfaction through enhanced facilities, better management practices, and increased employee engagement initiatives.
 ✅Career Advancement: Shorten the interval between promotions by establishing clear career progression paths and upskilling opportunities, which may lead to improved employee performance.
